@@ -23,14 +23,6 @@ async function main() {
   eddaVerseDrop = await EddaVerseDrop.deploy();
   await eddaVerseDrop.deployed();
   console.log("eddaVerseDrop address:", eddaVerseDrop.address);
-
-  console.log("Init eddaVerseDrop ...");
-  const initEddaDropTx = await eddaVerseDrop.initialize(
-  );
-  await initEddaDropTx.wait();
-
-
-  const newDop = EddaVerseDrop.attach(dropAddress);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

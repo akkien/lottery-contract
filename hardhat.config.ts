@@ -27,34 +27,14 @@ const config: HardhatUserConfig = {
   solidity: {
     compilers: [
       {
-        version: "0.8.12",
+        version: "0.8.14",
         settings: { optimizer: { enabled: true, runs: 200 } },
       },
     ],
   },
   networks: {
-    mainnet: {
-      url: process.env.MAINNET_URL || "",
-      accounts: [
-        process.env.PRIVATE_KEY ? process.env.PRIVATE_KEY : "",
-        process.env.PRIVATE_KEY_2 ? process.env.PRIVATE_KEY_2 : "",
-        process.env.PRIVATE_KEY_3 ? process.env.PRIVATE_KEY_3 : "",
-      ],
-      timeout: 8000000,
-      gasPrice: "auto",
-    },
     ropsten: {
       url: process.env.ROPSTEN_URL || "",
-      accounts: [
-        process.env.PRIVATE_KEY ? process.env.PRIVATE_KEY : "",
-        process.env.PRIVATE_KEY_2 ? process.env.PRIVATE_KEY_2 : "",
-        process.env.PRIVATE_KEY_3 ? process.env.PRIVATE_KEY_3 : "",
-      ],
-      timeout: 8000000,
-      gasPrice: 20000000000, // 20 Gwei
-    },
-    rinkeby: {
-      url: process.env.RINKEBY_URL || "",
       accounts: [
         process.env.PRIVATE_KEY ? process.env.PRIVATE_KEY : "",
         process.env.PRIVATE_KEY_2 ? process.env.PRIVATE_KEY_2 : "",
@@ -72,26 +52,6 @@ const config: HardhatUserConfig = {
       ],
       timeout: 8000000,
       gasPrice: 20000000000, // 20 Gwei
-    },
-    polygon: {
-      url: `https://rpc-mainnet.maticvigil.com`,
-      gasPrice: 100000000000, // 100 Gwei
-      timeout: 8000000,
-      accounts: [
-        process.env.PRIVATE_KEY ? process.env.PRIVATE_KEY : "",
-        process.env.PRIVATE_KEY_2 ? process.env.PRIVATE_KEY_2 : "",
-        process.env.PRIVATE_KEY_3 ? process.env.PRIVATE_KEY_3 : "",
-      ],
-    },
-    polygonTest: {
-      url: `https://rpc-mumbai.maticvigil.com`,
-      gasPrice: 100000000000, // 100 Gwei
-      timeout: 8000000,
-      accounts: [
-        process.env.PRIVATE_KEY ? process.env.PRIVATE_KEY : "",
-        process.env.PRIVATE_KEY_2 ? process.env.PRIVATE_KEY_2 : "",
-        process.env.PRIVATE_KEY_3 ? process.env.PRIVATE_KEY_3 : "",
-      ],
     },
   },
   gasReporter: {
