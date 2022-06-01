@@ -43,16 +43,6 @@ const config: HardhatUserConfig = {
       timeout: 8000000,
       gasPrice: 20000000000, // 20 Gwei
     },
-    bscTest: {
-      url: "https://data-seed-prebsc-1-s1.binance.org",
-      accounts: [
-        process.env.PRIVATE_KEY ? process.env.PRIVATE_KEY : "",
-        process.env.PRIVATE_KEY_2 ? process.env.PRIVATE_KEY_2 : "",
-        process.env.PRIVATE_KEY_3 ? process.env.PRIVATE_KEY_3 : "",
-      ],
-      timeout: 8000000,
-      gasPrice: 20000000000, // 20 Gwei
-    },
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
