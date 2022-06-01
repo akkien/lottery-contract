@@ -19,7 +19,7 @@ Lottery 0x639Fde7E77468b25d6D674A04168926f13c407AE
 
 You can `Create new` lottery or `Use existing` lottery.
 
-With existing lottery contract, you can `enter address` or a lottery, or `pick` from the list (left side) of lotteries you created before.
+With existing lottery contract, you can `enter address` (e.g. 0x0f12f75Af1702E958061d73B511EE475e0cF64aF) or a lottery, or `pick` from the list (left side) of lotteries you created before.
 
 To interact with a lottery (right side):
 
