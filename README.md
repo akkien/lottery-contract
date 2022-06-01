@@ -1,16 +1,14 @@
 # Lottery Contracts
 
-## Contract Address
+## Introduction
 
-Erc20 0xd7DF306D557001f6b1e92C173FfCC5EC417E810B
-Factory 0x7FffF4f92E1dB6B32f337affE2Ae6a7c244699C3
-Lottery 0x639Fde7E77468b25d6D674A04168926f13c407AE
+Lottery is a game that player can bet a under-100 number X. Player must pay erc20 token to bet. When game owner stop the game, we use block number B to calculate win number W = B % 100. If X = W, then player win. Game owner get 10% of the money, all the winners will get the rest of money from contract.
 
 ## Demo Application
 
 <http://tiki-lottery-dapp.s3-website-ap-southeast-1.amazonaws.com/>
 
-- Application is running on Ropsten testnet
+- Contracts are deployed on Ropsten testnet
 - Factory contract: 0x7FffF4f92E1dB6B32f337affE2Ae6a7c244699C3
 
 ## How to use
